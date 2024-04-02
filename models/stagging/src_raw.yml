@@ -6,8 +6,10 @@ sources:
     schema: baseball  
     tables:
       - name: games_wide
+        description: Game details of Baseball
         columns:
           - name: gameid
+            description: unique Id of Game
             tests:
               - not_null
         freshness: # default freshness
@@ -15,6 +17,7 @@ sources:
           error_after: {count: 24, period: hour}
         loaded_at_field: updatedAt
       - name: schedules
+        description: Schedule details of Baseball
         columns:
           - name: gameid
             tests:
