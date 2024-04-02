@@ -37,6 +37,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   beyound_dbt:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
+    marts:
+      commercial:
+        +materialized: table
+    stagging:
+      +materialized: view

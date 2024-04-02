@@ -2,7 +2,7 @@ with
     game_wide as (
 
         select gameid, durationminutes, attendance
-        from `bigquery-public-data.baseball.games_wide`
+        from {{source('commercial_raw','games_wide')}}
 
     )
 select *

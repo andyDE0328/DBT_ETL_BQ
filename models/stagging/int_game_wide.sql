@@ -4,7 +4,7 @@ with
             gameid,
             avg(durationminutes) as avg_duration,
             avg(attendance) as avg_attendence
-        from `bigquery-public-data.baseball.games_wide`
+        from {{ ref("stg_game_wide")}}
         group by gameid
     )
 select *

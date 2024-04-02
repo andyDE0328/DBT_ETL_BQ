@@ -1,1 +1,0 @@
-SELECT gameId , avg(durationMinutes) as avg_duration, avg(attendance) as avg_attendence FROM `bigquery-public-data.baseball.games_wide` group by gameId
