@@ -6,4 +6,4 @@ with
                         inner join
                     schedule t2
                         on t1.gameid = t2.gameid)
-    select * from final;
+    select * from final
