@@ -1,3 +1,8 @@
+{{ config(
+    pre_hook="insert into `project-beyond-418616.stagging.model_logging` values ('fact_game_stats,'started', CURRENT_TIMESTAMP())" ,
+    post_hook="insert into `project-beyond-418616.stagging.model_logging` values ('fact_game_stats,'Ended', CURRENT_TIMESTAMP())" ,
+) }}
+
 with
     game_wide as (select * from {{ ref("int_game_wide") }}),
     schedule as (select * from {{ ref("stg_schedule") }}),
