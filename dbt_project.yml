@@ -27,6 +27,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 vars:
   std_time: 150
 
+on-run-end:
+  - "{{ dbt_artifacts.upload_results(results) }}"
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -46,4 +48,6 @@ models:
         +schema: commercial
     stagging:
       +materialized: view
+      +schema: stagging
+    dbt_artifacts:
       +schema: stagging

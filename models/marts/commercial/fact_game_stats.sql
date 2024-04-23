@@ -1,5 +1,5 @@
 {{ config(
-    pre_hook="insert into `project-beyond-418616.stagging.model_logging` values ('fact_game_stats','started', CURRENT_TIMESTAMP())" ,
+    pre_hook="insert into `project-beyond-418616.stagging.model_logging` values ('fact_game_stats','Started', CURRENT_TIMESTAMP())" ,
     post_hook="insert into `project-beyond-418616.stagging.model_logging` values ('fact_game_stats','Ended', CURRENT_TIMESTAMP())" ,
 ) }}
 
