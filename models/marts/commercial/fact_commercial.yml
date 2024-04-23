@@ -8,3 +8,4 @@ models:
           - game_id_check:
               to : ref('int_game_wide')
               field: gameid
+
