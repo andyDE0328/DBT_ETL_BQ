@@ -53,7 +53,7 @@ WITH
     final AS (
         SELECT
             ap.season,
-            t.team_long_name,
+            t.team_long_name As team_name,
             ap.total_matches,
             ap.wins,
             ap.losses,
