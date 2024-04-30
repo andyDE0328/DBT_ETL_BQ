@@ -12,13 +12,13 @@ with
                select
                     id as league_id,
                     name as league_name,
-               from {{ ref("league") }}
+               from {{source('soccer_bronze','league')}}
     ),
     country as (
                select
                     id as country_id,
                     name as country name
-               from {{ ref("country") }}
+               from {{source('soccer_bronze','country')}}
     ),
     final as (
               select
