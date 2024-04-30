@@ -24,6 +24,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+vars:
+  std_time: 150
+
+#on-run-end:
+#  - "{{ dbt_artifacts.upload_results(results) }}"
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -38,7 +43,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   beyound_dbt:
     marts:
-      commercial:
+      soccer_analytics:
         +materialized: table
+        +schema: soccer_gold
     stagging:
-      +materialized: view
+      bronze_tables:
+        +materialized: view
+        +schema: soccer_bronze
+      silver_tables:
+        +materialized: table
+        +schema: soccer_silver
+#    dbt_artifacts:
+#      +schema: stagging

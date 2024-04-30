@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: soccer_bronze
+    database: project-beyond-418616
+    schema: soccer_bronze
+    tables:
+      - name: country
+        description: Country Details
+        columns:
+          - name: id
+            description: unique Id of Country
+            tests:
+              - not_null
+
+      - name: league
+        description: All leagues in Europe
+
+      - name: match
+        description: All match details
+
+      - name: player
+        description: All player details
+
+      - name: player_attribute
+        description: All player attribute
+
+      - name: team
+        description: All team details
+
+      - name: team_attribute
+        description: All team attributes
+

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fact_league_game_stats
+    columns:
+      - name: league_name
+        tests:
+          - game_id_check:
+              to : ref('league')
+              field: name
+

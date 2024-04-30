@@ -1,9 +1,9 @@
 version: 2
 
 models:
-  - name: stg_game_wide
+  - name: stg_team
     columns:
-      - name: gameid
+      - name: id
         tests:
           - not_null
           
