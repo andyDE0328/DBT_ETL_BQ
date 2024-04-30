@@ -17,7 +17,7 @@ with
     country as (
                select
                     id as country_id,
-                    name as country name
+                    name as country_name
                from {{source('soccer_bronze','country')}}
     ),
     final as (

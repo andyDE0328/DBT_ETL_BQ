@@ -35,4 +35,4 @@ with
                     team away_team
                         ON m.away_team_api_id = away_team.team_api_id
            )
-    select * from final;
+    select * from final
