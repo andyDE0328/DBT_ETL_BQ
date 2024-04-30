@@ -11,7 +11,8 @@ with
                         home_team_goal,
                         away_team_goal,
                         home_team_api_id,
-                        away_team_api_id
+                        away_team_api_id,
+                        season
                 from {{source('soccer_bronze','match')}}
   ),
     final as
