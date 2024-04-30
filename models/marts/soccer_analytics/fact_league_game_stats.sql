@@ -6,7 +6,7 @@ with
                     season,
                     league_id,
                     country_id
-                from {{ ref("stg_team") }}
+                from {{ ref("team_wide") }}
     ),
     league as (
                select
