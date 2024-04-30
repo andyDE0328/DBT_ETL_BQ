@@ -26,7 +26,7 @@ with
                     country_name,
                     season,
                     AVG(m.home_team_goal + m.away_team_goal) AS avg_goals_per_match,
-                    MAX(m.home_team_goal + m.away_team_goal) AS max_goals_in_a_match
+                    round(MAX(m.home_team_goal + m.away_team_goal),2) AS max_goals_in_a_match
               from match_wide m
               JOIN league l
                     ON m.league_id = l.league_id

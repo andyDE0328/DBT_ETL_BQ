@@ -2,10 +2,14 @@ version: 2
 
 models:
   - name: fact_league_game_stats
+    description:  Providing breakdown of matches by league and country, detailing the average goals scored and identifying the highest-scoring games each season
     columns:
       - name: league_name
         tests:
           - game_id_check:
               to : ref('league')
               field: name
+
+  - name: fact_team_performance_stats
+    description: Assessing team performance across different seasons by calculating the total matches played, wins, losses, and draws for each team
 
