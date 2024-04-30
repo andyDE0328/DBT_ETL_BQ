@@ -25,7 +25,7 @@ WITH
         GROUP BY
             season, away_team_api_id
             ),
-    team_performance(
+    team_performance As (
         select
             *
         FROM
