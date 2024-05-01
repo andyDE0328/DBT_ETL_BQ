@@ -13,3 +13,5 @@ models:
   - name: fact_team_performance_stats
     description: Assessing team performance across different seasons by calculating the total matches played, wins, losses, and draws for each team
 
+  - name: fact_player_performance_stats
+    description: Analyzing how the physical attributes of players (height and weight) affect their performance in matches, particularly focusing on goal involvement
