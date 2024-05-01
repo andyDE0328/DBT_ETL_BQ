@@ -20,17 +20,11 @@ with
     ),
     player_attribute AS (
         SELECT
+            DISTINCT
             player_api_id,
-            max(overall_rating) OVER (PARTITION BY player_api_id) as max_overall_rating ,
-            date
+            max(overall_rating) OVER (PARTITION BY player_api_id) as max_overall_rating
         FROM
           {{source('soccer_bronze','player_attribute')}}
-    ),
-    max_date AS (
-        SELECT
-            MAX(date) as max_date
-       FROM
-            {{source('soccer_bronze','player_attribute')}}
     ),
     final AS (
         SELECT
