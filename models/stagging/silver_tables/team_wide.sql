@@ -7,11 +7,14 @@ with
     match as (
                 select
                         id,
+                        league_id,
                         date,
                         home_team_goal,
                         away_team_goal,
                         home_team_api_id,
-                        away_team_api_id
+                        away_team_api_id,
+                        season,
+                        country_id
                 from {{source('soccer_bronze','match')}}
   ),
     final as
@@ -35,4 +38,4 @@ with
                     team away_team
                         ON m.away_team_api_id = away_team.team_api_id
            )
-    select * from final;
+    select * from final

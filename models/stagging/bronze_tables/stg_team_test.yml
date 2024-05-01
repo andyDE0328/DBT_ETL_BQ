@@ -3,7 +3,7 @@ version: 2
 models:
   - name: stg_team
     columns:
-      - name: id
+      - name: team_id
         tests:
           - not_null
           
