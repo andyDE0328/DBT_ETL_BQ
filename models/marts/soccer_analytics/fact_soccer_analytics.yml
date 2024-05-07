@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fact_league_game_stats
-    description:  '{{ doc("league_game_stats"}}'
+    description:  '{{ doc("league_game_stats")}}'
     columns:
       - name: league_name
         tests:
@@ -14,7 +14,7 @@ models:
     description: Assessing team performance across different seasons by calculating the total matches played, wins, losses, and draws for each team
     columns:
       - name : team_name
-        description : '{{ doc("team_long_name"}}'
+        description : '{{ doc("team_long_name")}}'
 
 
   - name: fact_player_performance_stats
