@@ -29,15 +29,15 @@ sources:
         description: All team details
         columns:
           - name: id
-            description: '{{ doc("team_id"}}'
+            description: '{{ doc("team_id")}}'
           - name: team_api_id
-            description: '{{ doc("team_api_id"}}'
+            description: '{{ doc("team_api_id")}}'
           - name: team_fifa_api_id
             description: 'Team Fifa api id'
           - name: team_long_name
-            description: '{{ doc("team_long_name"}}'
+            description: '{{ doc("team_long_name")}}'
           - name: team_short_name
-            description: '{{ doc("team_logo_name"}}'
+            description: '{{ doc("team_logo_name")}}'
 
 
 
