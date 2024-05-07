@@ -4,7 +4,7 @@ models:
   - name: stg_team
     columns:
       - name: team_id
-        description: '{{ doc("team_id"}}'
+        description: '{{ doc("team_id")}}'
         tests:
           - not_null
           
