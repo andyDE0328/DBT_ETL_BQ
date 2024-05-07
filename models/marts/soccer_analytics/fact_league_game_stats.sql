@@ -1,6 +1,6 @@
 {{
   config(
-    labels = {'contains_pii': 'no', 'table_layer': 'Gold'}
+    labels = {'contains_pii': 'no', 'table_layer': 'gold'}
   )
 }}
 

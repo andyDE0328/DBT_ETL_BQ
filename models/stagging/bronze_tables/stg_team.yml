@@ -4,7 +4,7 @@ models:
   - name: stg_team
     +labels:
       contains_pii: no
-      table_layer: Bronze
+      table_layer: bronze
     columns:
       - name: team_id
         description: '{{ doc("team_id")}}'
