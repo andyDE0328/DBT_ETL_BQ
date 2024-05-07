@@ -26,7 +26,7 @@ sources:
         description: All player attribute
         freshness: # default freshness
           warn_after: { count: 600, period: day } #or error_after
-          loaded_at_field: date
+        loaded_at_field: date
 
       - name: team
         description: All team details
@@ -48,7 +48,8 @@ sources:
         description: All team attributes
         freshness: # default freshness
           warn_after: { count: 600, period: day } #or error_after
-          loaded_at_field: date
           filter: id > 200   #filter to Limit  data Scan
+        loaded_at_field: date
+
 
 
