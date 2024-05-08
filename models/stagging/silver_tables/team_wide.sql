@@ -37,5 +37,8 @@ with
             JOIN
                     team away_team
                         ON m.away_team_api_id = away_team.team_api_id
+            {% if target.name == 'default' %}
+                    where current_date <= DATE_ADD(DATE(date), INTERVAL 3650 DAY)
+            {% endif %}
            )
     select * from final

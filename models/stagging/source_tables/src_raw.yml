@@ -2,7 +2,12 @@ version: 2
 
 sources:
   - name: soccer_bronze
-    database: project-beyond-418616
+    database: |
+      {%- if  target.name == "default" -%} project-beyond-418616
+      {%- elif target.name == "qa"  -%} raw_qa
+      {%- elif target.name == "prod"  -%} raw_prod
+      {%- else -%} invalid_database
+      {%- endif -%}
     schema: soccer_bronze
     tables:
       - name: country
@@ -24,6 +29,9 @@ sources:
 
       - name: player_attribute
         description: All player attribute
+        freshness: # default freshness
+          warn_after: { count: 600, period: day } #or error_after
+        loaded_at_field: date
 
       - name: team
         description: All team details
@@ -43,4 +51,10 @@ sources:
 
       - name: team_attribute
         description: All team attributes
+        freshness: # default freshness
+          warn_after: { count: 600, period: day } #or error_after
+          filter: id > 200   #filter to Limit  data Scan
+        loaded_at_field: date
+
+
 

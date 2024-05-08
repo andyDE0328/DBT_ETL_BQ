@@ -2,10 +2,15 @@ version: 2
 
 models:
   - name: stg_team
+    +labels:
+      contains_pii: no
+      table_layer: bronze
     columns:
       - name: team_id
         description: '{{ doc("team_id")}}'
         tests:
           - not_null
+
+
           
 

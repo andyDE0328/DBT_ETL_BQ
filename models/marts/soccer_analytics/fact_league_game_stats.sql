@@ -1,3 +1,9 @@
+{{
+  config(
+    labels = {'contains_pii': 'no', 'table_layer': 'gold'}
+  )
+}}
+
 with
     match_wide as (
                 select
