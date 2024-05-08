@@ -19,3 +19,23 @@ models:
 
   - name: fact_player_performance_stats
     description: Analyzing how the physical attributes of players (height and weight) affect their performance in matches, particularly focusing on goal involvement
+
+exposures:
+
+  - name: Soccer_Stats
+    label: Statistic of Soccer
+    type: dashboard
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      Complete Statistics of Europe Soccer 
+
+    depends_on:
+      - ref('fact_league_game_stats')
+      - ref('fact_team_performance_stats')
+      - ref('fact_player_performance_stats')
+      - source('soccer_bronze','match')
+
+    owner:
+      name: Anand Pawar
+      email: anand@dummy.com
