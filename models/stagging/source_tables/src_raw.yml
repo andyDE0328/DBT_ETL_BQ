@@ -2,7 +2,12 @@ version: 2
 
 sources:
   - name: soccer_bronze
-    database: project-beyond-418616
+    database: |
+      {%- if  target.name == "default" -%} project-beyond-418616
+      {%- elif target.name == "qa"  -%} raw_qa
+      {%- elif target.name == "prod"  -%} raw_prod
+      {%- else -%} invalid_database
+      {%- endif -%}
     schema: soccer_bronze
     tables:
       - name: country
